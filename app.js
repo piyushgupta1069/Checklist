@@ -11,7 +11,7 @@ app.set("views", path.join(__dirname, "/views"));
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "/public")));
 
 mongoose.connect(
   "mongodb+srv://piyushgupta106970:6VvEBiNfPBGqhm4I@cluster0.c294xcu.mongodb.net/checklistDB?retryWrites=true&w=majority",
